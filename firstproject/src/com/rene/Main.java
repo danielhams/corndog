@@ -4,27 +4,26 @@ import java.util.Scanner;
 public class Main {
 	public static void main( String[] args )
 	{
-		Scanner laps = new Scanner( System.in );
-		Scanner laptotal = new Scanner( System.in );
-		Scanner lapnotaverage = new Scanner( System.in );
+		Scanner inputScanner = new Scanner( System.in );
+		
 		int x;
 		double averageoriginal = 0;
 		double averagemod1;
 		double lapoutaverage;
 
 		System.out.print( "how many laps to count : " );
-		x = laptotal.nextInt();
+		x = inputScanner.nextInt();
 
 		double[] laptimes = new double[x];
 		double[] laptimemod = new double[x];
 
 		System.out.print( "Give limit for laps out of average : " );
-		lapoutaverage = lapnotaverage.nextDouble();
+		lapoutaverage = inputScanner.nextDouble();
 
 		for( int i = 0 ; i < laptimes.length ; i++ )
 		{
 			System.out.print( "Please enter Laptime " + (i + 1) + " : " );
-			laptimes[ i ] = laps.nextDouble();
+			laptimes[ i ] = inputScanner.nextDouble();
 		}
 
 		for( int i = 0 ; i < laptimes.length ; i++ )
